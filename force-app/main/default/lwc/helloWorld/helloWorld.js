@@ -1,6 +1,8 @@
 import { LightningElement, track } from 'lwc';
 
 export default class HelloWorld extends LightningElement {
+    
+    /****Data binding***/
     //local properties
     name            //undefined
     age = 22
@@ -13,6 +15,8 @@ export default class HelloWorld extends LightningElement {
         this.title = event.target.value
     }
 
+
+    /***Understanding @track method***/
     @track address = {
         city : 'Bogotá',
         postCode : 111015,
@@ -25,4 +29,17 @@ export default class HelloWorld extends LightningElement {
         //this.address = {...this.address, "city": event.target.value}
     }
      
+
+    /***Getter methods***/
+    users =  ['Paula', 'Raúl', 'Carlos']
+    num1 = 10
+    num2 = 12
+
+    get firstUser(){
+        return this.users[0].toUpperCase()
+    }
+
+    get multiply(){
+        return this.num1 * this.num2
+    }
 }
