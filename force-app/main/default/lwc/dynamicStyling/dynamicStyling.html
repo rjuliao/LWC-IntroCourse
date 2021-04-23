@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Dynamic CSS Styling">
+        <div class="slds-m-around_medium">
+            <lightning-input 
+                type="text" 
+                label="Percentage" 
+                value={percent}
+                onkeyup={changeHandler}>
+            </lightning-input>
+            <div style={percentage} class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error" 
+                role="alert">
+                Hey tomorrow you have another interview :D
+            </div>
+        </div>
+    </lightning-card>
+</template>
