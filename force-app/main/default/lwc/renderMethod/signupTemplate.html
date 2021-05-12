@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Testing the render method">
+        <div class="slds-m-around_medium">
+          <div class="slds-p-around_medium lgc-bg">
+            <lightning-input type="email" name="email" label="Email address" required></lightning-input>
+            <lightning-input type="password" name="psw" label="Enter your new password" required></lightning-input>
+          </div>
+          <lightning-button 
+            variant="destructive"
+            label="Back"
+            title="Back"
+            onclick={handleClick}
+            class="slds-m-left_x-small">
+          </lightning-button>
+          <lightning-button 
+            variant="success"
+            label="Ok"
+            title="Ok"
+            onclick={handleClick}
+            class="slds-m-left_x-small">
+          </lightning-button>
+        </div>
+    </lightning-card>
+</template>
