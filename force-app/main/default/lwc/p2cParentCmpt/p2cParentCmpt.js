@@ -19,4 +19,9 @@ export default class P2cParentCmpt extends LightningElement {
         }
     ]
 
+    percentage = 10
+    changeHandler(event){
+        this.percentage = event.target.value
+    }
+
 }
