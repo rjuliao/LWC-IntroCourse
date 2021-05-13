@@ -2,6 +2,7 @@
     <lightning-card title="Child to parent communication using simple event">
         <div class="slds-m-around_medium">
             <lightning-button label="Show modal" onclick={clickHandler}></lightning-button>
+            <h1>{msg}</h1>
             <template if:true={showModal}>
                 <c-c2p-modal-cmpt
                     onclose={closeHanlder}
