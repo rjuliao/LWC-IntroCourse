@@ -19,4 +19,10 @@
             <c-p2c-progress-cmpt progress-value={percentage}></c-p2c-progress-cmpt>
         </div>
     </lightning-card>
+    
+    <!--Example of calling a child methon from the parent-->
+    <div class="slds-m-bottom_medium"></div>
+    <lightning-button variant="brand" label="Reset Slider" onclick={handleClick}>
+    </lightning-button>
+    <c-p2c-slider-cmpt></c-p2c-slider-cmpt>
 </template>

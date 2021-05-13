@@ -24,4 +24,7 @@ export default class P2cParentCmpt extends LightningElement {
         this.percentage = event.target.value
     }
 
+    handleClick(){
+        this.template.querySelector('c-p2c-slider-cmpt').resetSlider()
+    }
 }
