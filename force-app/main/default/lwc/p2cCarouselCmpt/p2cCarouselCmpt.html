@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Parent to child with non-primitive data type">
+        <div class="slds-m-around_medium">
+        <lightning-carousel disable-auto-scroll>
+            <template for:each = {carouselDetails} for:item = "item">
+                <lightning-carousel-image
+                    key= {item.header}
+                    src = {item.src}
+                    header = {item.header}
+                    description = {item.description}>
+                </lightning-carousel-image>
+            </template>
+        </lightning-carousel>
+        </div>
+    </lightning-card>
+</template>
+
