@@ -1,3 +1,16 @@
 <template>
-    
+    <lightning-card title="External JS libraries CMPT">
+        <div class="slds-p-around_medium">
+            <p>Date: </p> <strong>{currentDate}</strong>
+            <div class="slds-p-top_x-small">
+                <lightning-button 
+                    variant="base" 
+                    label="Refresh" 
+                    title="Refresh the date" 
+                    onclick={handleBtn} 
+                    class="slds-m-left_x-small">
+                </lightning-button>
+            </div>
+        </div>
+    </lightning-card>
 </template>
