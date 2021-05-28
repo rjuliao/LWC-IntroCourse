@@ -18,7 +18,7 @@
                 onkeyup="{!c.inputHandler}"
             />
             <div class="slds-p-top_small">
-                <lightning:button variant="base" label="Publish" title="Publish Message" onclick="{!c.publishMessage}"/>
+                <lightning:button variant="brand" label="Publish" title="Publish Message" onclick="{!c.publishMessage}"/>
             </div>
         </div>
         <div class="slds-p-around_medium">
