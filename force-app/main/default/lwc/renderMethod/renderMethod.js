@@ -5,6 +5,7 @@ import renderTemplate from './renderMethod.html';
 
 export default class RenderMethod extends LightningElement {
     templateValue
+    //This is an example
     render() {
         return this.templateValue === "Signin" ? signinTemplate :
                 this.templateValue === "Signup" ? signupTemplate :
