@@ -1,3 +1,43 @@
 <template>
-    
+    <lightning-card title="Toast notifications example">
+        <div class="slds-p-around_medium">
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col">
+                    <lightning-button 
+                        variant="success" 
+                        label="Success" 
+                        title="Success Notif" 
+                        onclick={handleClickOne} 
+                        class="slds-m-left_x-small">
+                    </lightning-button>
+                </div>
+                <div class="slds-col">
+                    <lightning-button 
+                        variant="destructive" 
+                        label="Error" 
+                        title="Error Notif" 
+                        onclick={handleClickTwo} 
+                        class="slds-m-left_x-small">
+                    </lightning-button>
+                </div>
+                <div class="slds-col">
+                    <lightning-button 
+                        variant="brand-outline" 
+                        label="Warning" 
+                        title="Warning Notif" 
+                        onclick={handleClickThree} 
+                        class="slds-m-left_x-small">
+                    </lightning-button>
+                </div>
+                <div class="slds-col">
+                    <lightning-button 
+                        label="Information" 
+                        title="Information Notif" 
+                        onclick={handleClickFour} 
+                        class="slds-m-left_x-small">
+                    </lightning-button>
+                </div>
+            </div>
+        </div>
+    </lightning-card>
 </template>
