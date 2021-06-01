@@ -1,0 +1,73 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.score-panel{
+    text-align: left;
+    margin-bottom: 12px;
+}
+
+.timer{
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+.restart{
+    float: right;
+    cursor: pointer;
+    margin: 0px 8px;
+}
+
+.grid-containder{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+    background-color: burlywood;
+    padding: 1rem;
+    border-radius: 4px;
+    box-shadow: 8px 9px 26px 0 rgb(46, 61, 73,  0.5)
+}
+
+.grid-containder .card{
+    height: 3.7rem;
+    width: 3.7rem;
+    margin: 0.2rem;
+    background: indianred;
+    font-size: 0;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgb(46, 61, 73, 0.5);
+}
+
+.card .open{
+    transform: rotateY(0);
+    background: #02b3e4;
+    cursor: default;
+    animation-name: flipIny;
+    -webkit-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+    animation-duration: .75s;
+}
+
+/*ANIMATIONS IN CSS*/
+@keyframes flipIny {
+    from{
+        transform: perspective(400px) rotate3d(0, 1, 01 90deg);
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    40% {
+        transform: perspective(400px) rotate3d(0,1,0, -20deg);
+        animation-timing-function: ease-in;
+    }
+}
