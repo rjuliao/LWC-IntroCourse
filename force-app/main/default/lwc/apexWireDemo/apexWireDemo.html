@@ -1,3 +1,29 @@
 <template>
-    
+    <lightning-card title="Apex in lwc using property ">
+        <div class="slds-m-around_medium">
+            <template if:true={accounts.data}>
+                <template for:each={accounts.data} for:item="acc">
+                    <div class="slds-box slds-box_xx-small" key={acc.id}>
+                        <p>Name: <strong>{acc.Name}</strong></p>
+                        <p>Type: <strong>{acc.Type}</strong></p>
+                        <p>Industry: <strong>{acc.Industry}</strong></p>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="Apex in lwc usings demo">
+        <div class="slds-m-around_medium">
+            <template if:true={accountList}>
+                <template for:each={accountList} for:item="acc">
+                    <div class="slds-box slds-box_xx-small" key={acc.id}>
+                        <p>Name: <strong>{acc.Name}</strong></p>
+                        <p>Type: <strong>{acc.newType}</strong></p>
+                        <p>Industry: <strong>{acc.Industry}</strong></p>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
 </template>
