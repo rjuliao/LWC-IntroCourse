@@ -8,4 +8,14 @@ public with sharing class AccountController {
             throw new AuraHandledException(e.getMessage());
         }
     }
+
+    @AuraEnabled
+    public static List<Account> filterAccountType(String type){
+        try {
+            return [SELECT Id, Name, Type, Industry FROM Account WHERE Type =: type LIMIT 5];
+        } catch (Exception e) {
+            throw new AuraHandledException(e.getMessage());
+        }
+    }
+
 }
