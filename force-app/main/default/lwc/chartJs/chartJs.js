@@ -1,10 +1,14 @@
-import { LightningElement } from 'lwc';
+import { api, LightningElement } from 'lwc';
 import chartJs from '@salesforce/resourceUrl/chartJs';
 import {loadScript} from 'lightning/platformResourceLoader'
 
 export default class ChartJs extends LightningElement {
     ischartJsInit
     chart
+    @api type
+    @api chartHeading
+    @api chartData
+    @api chartLabels
 
     renderedCallback(){
         if(this.ischartJsInit){
@@ -31,19 +35,23 @@ export default class ChartJs extends LightningElement {
 
     config(){
         return {
-            type: 'bar',
+            type: this.type,
             data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                labels: this.chartLabels ? this.chartLabels : [],
                 datasets: [{
-                    label: '# of Votes',
-                    data: [12, 19, 3, 5, 2, 3],
+                    label: this.chartHeading,
+                    data: this.chartData ? this.chartData : [],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
                         'rgba(255, 206, 86, 0.2)',
                         'rgba(75, 192, 192, 0.2)',
                         'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(255, 159, 74, 0.2)',
+                        'rgba(255, 59, 204, 0.8)',
+                        'rgba(25, 159, 255, 0.2)',
+                        'rgba(69, 68, 64, 0.8)'
                     ],
                     borderColor: [
                         'rgba(255, 99, 132, 1)',
@@ -57,10 +65,13 @@ export default class ChartJs extends LightningElement {
                 }]
             },
             options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
+                responsive : true,
+                legend :{
+                    position : 'right'
+                },
+                animation :{
+                    animateScale : true,
+                    animateRotate : true,
                 }
             }
         }
